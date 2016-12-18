@@ -1,7 +1,7 @@
 import {PageHeader} from "bootstrap-react-components";
 import React from "react";
 
-class ItemDescription extends React.Component {
+class Description extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -59,4 +59,4 @@ class ItemDescription extends React.Component {
 	}
 }
 
-export default ItemDescription;
+export default Description;
