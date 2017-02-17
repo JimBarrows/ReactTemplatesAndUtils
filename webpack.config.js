@@ -15,20 +15,12 @@ module.exports = {
 			{
 				test: /\.jsx$/,
 				loader: 'babel',
-				exclude: /(node_modules|bower_components)/,
-				query: {
-					presets: ['react', 'es2015', 'stage-2'],
-					plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
-				}
+				exclude: /(node_modules|bower_components)/
 			},
 			{
 				test: /\.js?$/,
 				loader: 'babel',
-				exclude: /(node_modules|bower_components)/,
-				query: {
-					presets: ['react', 'es2015', 'stage-2'],
-					plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy']
-				}
+				exclude: /(node_modules|bower_components)/
 			},
 			{test: /\.json$/, loader: "json"},
 			{test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file"},

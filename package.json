@@ -18,7 +18,7 @@
   "contributors": [],
   "main": "./distribution/index.js",
   "scripts": {
-    "build": "babel src --presets babel-preset-es2015 --out-dir distribution",
+    "build": "babel src --out-dir distribution",
     "prepublish": "npm run build",
     "test": "babel-node runSpecs.js"
   },
@@ -28,19 +28,20 @@
   "devDependencies": {
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "babel-cli": "^6.10.1",
-    "babel-core": "^6.10.4",
-    "babel-loader": "^6.2.4",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.0",
+    "babel-loader": "^6.2.7",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-react-html-attrs": "^2.0.0",
-    "babel-plugin-transform-class-properties": "^6.11.5",
+    "babel-plugin-transform-class-properties": "^6.18.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-polyfill": "^6.9.1",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-react": "^6.11.1",
-    "babel-preset-stage-2": "^6.11.0",
-    "babel-plugin-transform-react-jsx": "^6.8.0",
-    "webpack": "^1.13.1",
+    "babel-polyfill": "^6.16.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "jsx-html-class": "^1.0.3",
+    "webpack": "^1.13.3",
     "webpack-dev-server": "^1.14.1"
   }
 }
