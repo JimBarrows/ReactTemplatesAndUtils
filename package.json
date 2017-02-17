@@ -23,7 +23,8 @@
     "test": "babel-node runSpecs.js"
   },
   "dependencies": {
-    "bootstrap-react-components": "^0.16.0"
+    "bootstrap-react-components": "^0.16.0",
+    "bson-objectid": "^1.1.5"
   },
   "devDependencies": {
     "react": "^15.3.2",
