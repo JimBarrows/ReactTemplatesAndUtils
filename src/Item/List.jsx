@@ -11,9 +11,6 @@ class List extends React.Component {
 	}
 
 	addToList(item) {
-		if (!item._id) {
-			item._id = ObjectId.generate();
-		}
 		let list = [...this.state.list, item];
 		this.setState({
 			list,
@@ -66,16 +63,19 @@ class List extends React.Component {
 	}
 
 	removeItem(item) {
-		let list = this.state.list.filter((r) => item._id !== r._id);
+		let list = this.state.list.filter((r) => this.itemEqualsItem(r, item));
 		this.setState({
 			list
 		});
 		this.props.onListChange(list);
 	}
 
+	itemEqualsItem(left, right) {
+		return left === right;
+	}
 
 	updateItem(item) {
-		let index              = this.state.list.findIndex((rule) => rule._id === item._id || rule.name === item.name);
+		let index              = this.state.list.findIndex((r) => this.itemEqualsItem(item, r));
 		this.state.list[index] = item;
 		this.setState({
 			list: this.state.list
