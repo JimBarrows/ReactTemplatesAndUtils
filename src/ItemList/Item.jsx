@@ -33,7 +33,7 @@ class Item extends React.Component {
 		let {allowEditing, editing, item}                 = props;
 		this.setState({
 			allowEditing,
-			editting,
+			editing,
 			item
 		});
 	}
