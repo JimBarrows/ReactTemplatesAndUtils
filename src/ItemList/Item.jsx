@@ -1,7 +1,7 @@
 import {PageHeader} from "bootstrap-react-components";
 import React from "react";
 
-class Description extends React.Component {
+class Item extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -30,9 +30,10 @@ class Description extends React.Component {
 	}
 
 	propsToState(props) {
-		let {allowEditing, item}                 = props;
+		let {allowEditing, editing, item}                 = props;
 		this.setState({
 			allowEditing,
+			editting,
 			item
 		});
 	}
@@ -59,4 +60,4 @@ class Description extends React.Component {
 	}
 }
 
-export default Description;
+export default Item;

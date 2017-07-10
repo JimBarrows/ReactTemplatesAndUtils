@@ -9,13 +9,13 @@ class List extends React.Component {
 		})
 	}
 
-	addToList(item) {
+	addItem(item) {
 		let list = [...this.state.list, item];
 		this.setState({
 			list,
 			adding: false
 		});
-		this.props.onListChange(list);
+		this.props.addItem(item);
 	}
 
 	buttonEditOrNothing(buttonName, editor) {
@@ -25,11 +25,11 @@ class List extends React.Component {
 				return editor
 
 			} else {
-				return <button type="button" class="btn btn-default btn-xs" onClick={this.add.bind(this)}>
+				return (<button type="button" class="btn btn-default btn-xs" onClick={this.add.bind(this)}>
 					<span
 							class="glyphicon glyphicon-plus"
 							aria-hidden="true"/>{buttonName}
-				</button>
+				</button>)
 			}
 		} else {
 			return "";
@@ -66,7 +66,7 @@ class List extends React.Component {
 		this.setState({
 			list
 		});
-		this.props.onListChange(list);
+		this.props.removeItem(list);
 	}
 
 	itemEqualsItem(left, right) {
@@ -79,7 +79,7 @@ class List extends React.Component {
 		this.setState({
 			list: this.state.list
 		});
-		this.props.onListChange(this.state.list);
+		this.props.updateItem(item);
 	}
 }
 
